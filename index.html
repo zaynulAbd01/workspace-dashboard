@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workspace Dashboard</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="dashboard-shell">
+        <div class="dashboard">
+        <header class="dashboard-header">
+            <h1>🚀 Workspace Dashboard</h1>
+            <hr>
+        </header>
+
+        <main class="grid">
+            <section id="task-container" class="card">
+                <h2>Task Management Matrix</h2>
+                <hr>
+
+                <div class="input-group">
+                    <input type="text" id="task-input" placeholder="Enter desired task...">
+                    <select id="priority">
+                        <option value="High">High</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Low">Low</option>
+                    </select>
+                    <button id="add-task-btn">Add Task</button>
+                </div>
+
+                <div id="task-list" class="task-list" aria-live="polite">
+                    <!-- Task cards are inserted here -->
+                </div>
+
+                <button id="clear-low-btn" class="secondary-btn">Clear All Low Priority Tasks</button>
+            </section>
+
+            <section id="budget-container" class="card">
+                <h2>Live Budget System</h2>
+                <div class="balance-panel">
+                    <span class="label">Balance:</span>
+                    <h3 id="balance">₦45,000</h3>
+                </div>
+
+                <div class="input-group">
+                    <input type="number" id="expense-input" placeholder="Enter expense amount">
+                    <button id="deduct-btn">Deduct Expense</button>
+                </div>
+                <p class="budget-note">Logic Rule: If the balance formula B<sub>rem</sub> &lt; 0, programmatically change the display color card to crimson alert.</p>
+            </section>
+        </main>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>

@@ -1,0 +1,379 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1b1b1b;
+  background-color: #f0f4f8;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.dashboard-shell {
+  display: flex; 
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.dashboard {
+  width: 100%;
+  max-width: 1180px;
+  background: #f7f9fc;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 24px 50px rgba(1, 17, 46, 0.35);
+  border: 1em solid black;
+}
+
+.dashboard-header {
+    display: flex;
+  flex-direction: column; 
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background: #ffffff;
+  border: 1px solid rgba(40, 109, 176, 0.18);
+  border-radius: 1.5rem;
+  margin-bottom: 1.8rem;
+}
+
+.dashboard-header h1 {
+  font-size: clamp(2rem, 2.5vw, 3rem);
+  letter-spacing: 0.01em;
+}
+
+.dashboard-header hr {
+  border: 0;
+  border-top: 1px solid rgba(102, 122, 156, 0.24);
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 1.5rem;
+}
+
+.card {
+  background: #ffffff;
+  padding: 1.4rem;
+  border-radius: 1.4rem;
+  border: 1px dashed rgba(99, 118, 150, 0.34);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  color: #2369c6;
+  margin-bottom: 0.65rem;
+}
+
+.card hr {
+  border: 0;
+  border-top: 1px solid rgba(102, 122, 156, 0.2);
+  margin-bottom: 1.25rem;
+}
+
+.input-group {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr auto;
+  gap: 0.9rem;
+  margin-bottom: 1.4rem;
+}
+
+input,
+select,
+button {
+  font-size: 1rem;
+}
+
+input,
+select {
+  padding: 0.95rem 1rem;
+  border: 1px solid rgba(163, 177, 198, 0.55);
+  border-radius: 0.95rem;
+  background: #f4f7fb;
+  color: #1f304f;
+}
+
+button {
+  padding: 0.95rem 1.2rem;
+  border: none;
+  border-radius: 0.95rem;
+  cursor: pointer;
+  background: #3842d7;
+  color: #ffffff;
+  font-weight: 700;
+  transition: transform 0.18s ease, opacity 0.18s ease;
+}
+
+button:hover,
+button:focus-visible {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+.secondary-btn {
+  width: 100%;
+  background: #3d4f6d;
+}
+
+.balance-panel {
+  display: grid;
+  gap: 0.35rem;
+  padding: 1rem 1.25rem;
+  border-radius: 1rem;
+  background: #ebeff4;
+  margin-bottom: 1.4rem;
+}
+
+.balance-panel .label {
+  font-size: 0.95rem;
+  color: #4e6b95;
+}
+
+#balance {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #2f8f39;
+  margin: 0;
+}
+
+.budget-note {
+  color: #4f607c;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-top: 1.35rem;
+}
+
+.task-list {
+  display: grid;
+  gap: 0.95rem;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: #f6f8fb;
+  border: 1px solid rgba(65, 84, 119, 0.12);
+  position: relative;
+}
+
+.task-item::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  border-radius: 0 0.75rem 0.75rem 0;
+  background: #268a50;
+}
+
+.task-item.priority-high::before {
+  background: white;
+}
+.task-item.priority-low::before {
+  background: white;
+}
+
+.task-info {
+  display: grid;
+  gap: 0.35rem;
+  flex: 1;
+  padding-left: 0.6rem;
+}
+
+.task-title {
+  font-weight: 700;
+  color: #1f304f;
+}
+
+.task-priority {
+  color: #5c6f8d;
+  font-size: 0.95rem;
+}
+
+.delete-btn {
+  background: red;
+  padding: 0.75rem 1rem;
+  border-radius: 0.95rem;
+  border: 1px solid red;
+}
+
+.dashboard-header h1 {
+  font-size: clamp(2rem, 2.5vw, 3rem);
+  letter-spacing: 0.01em;
+}
+
+.dashboard-header hr {
+  border: 0;
+  border-top: 2px solid rgba(128, 128, 128, 0.35);
+  margin-top: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.07);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.card h2 {
+  font-size: 1.6rem;
+  color: #3f6ad8;
+  margin-bottom: 0.75rem;
+}
+
+.card hr {
+  border: 0;
+  border-top: 1px solid rgba(128, 128, 128, 0.35);
+  margin: 1rem 0;
+}
+
+.input-group {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+}
+
+input,
+select,
+button {
+  font-size: 1rem;
+}
+
+input,
+select {
+  flex: 1 1 180px;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.75rem;
+  background: #f9fbfd;
+}
+
+button {
+  padding: 0.95rem 1.25rem;
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  background: #3f6ad8;
+  color: #ffffff;
+  transition: transform 0.18s ease, background-color 0.18s ease, opacity 0.18s ease;
+}
+
+button:hover,
+button:focus-visible {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+.secondary-btn {
+  background: #1d3a84;
+}
+
+.task-list {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 0.9rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #f7f9fc;
+}
+
+.task-info {
+  display: grid;
+  gap: 0.35rem;
+  flex: 1;
+}
+
+.task-title {
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.task-priority {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: black;
+  font-weight: lighter;
+}
+
+.priority-high {
+  background: white;
+  border-left: #d43737 1em solid;
+}
+
+.priority-medium {
+  background: white;
+  border-left: rgb(251, 164, 3) 1em solid;
+}
+
+.priority-low {
+  background: white;
+  border-left: green 1em solid ;
+}
+
+.delete-btn {
+  background: #d8313f;
+  padding: 0.7rem 1rem;
+  border-radius: 0.75rem;
+  border: none;
+}
+
+#balance {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a7c34;
+}
+
+.negative-balance {
+  color: #d12f2f;
+}
+
+@media (max-width: 880px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 540px) {
+  .dashboard {
+    padding: 1.25rem;
+  }
+
+  .input-group {
+    grid-template-columns: 1fr;
+  }
+
+  button {
+    width: 100%;
+  }
+}
